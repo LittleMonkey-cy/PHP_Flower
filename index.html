@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base target="_blank" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- init.css必须第一个引用，当页面加载时首先清楚浏览器默认样式 -->
+  <link rel="stylesheet" href="./src/css/init.css" />
+  <link rel="stylesheet" href="./src/css/header.css" />
+  <link rel="stylesheet" href="./src/css/loop.css" />
+  <link rel="stylesheet" href="./src/css/content.css" />
+  <link rel="stylesheet" href="./src/css/class_pic.css" />
+  <link rel="stylesheet" href="./src/css/footer.css" />
+  <link rel="stylesheet" href="./src/css/class_table.css" />
+  <script src="./src/js/jquery-3.4.1.min.js"></script>
+  <script src="./src/js/layer.js"></script>
+  <script>
+    layer.msg("疯狂加载中");
+  </script>
+  <title>花瓣网-&copy;陈钰</title>
+</head>
+
+<body>
+  <!-- header上部分 -->
+  <header mystate="trans">
+    <div class="header_warp clearFix">
+      <!-- logo -->
+      <div class="header_logo fl">
+        <a href="#" class="header_logo_a"></a>
+      </div>
+      <!-- nav -->
+      <nav class="header_link fl">
+        <ul>
+          <li class="header_link_li"><a href="#">最新</a></li>
+          <li class="header_link_li"><a href="#">美思</a></li>
+          <li class="header_link_li"><a href="#">活动</a></li>
+          <li class="header_link_li"><a href="#">教育</a></li>
+          <li class="header_link_li"><a href="#">发现</a></li>
+        </ul>
+      </nav>
+      <!-- search -->
+      <div class="header_search fl" id="header_search">
+        <form action="#" method="POST">
+          <input type="text" name="" placeholder="搜索你喜欢的" class="header_search_text" /><input type="button" name=""
+            value="" class="header_search_button" />
+        </form>
+      </div>
+      <!-- 整个用户区域 -->
+      <div class="header_user rl">
+        <!-- 用户登录动作区域 -->
+        <div class="header_user_prelogin" id="header_user_prelogin">
+          <button class="header_user_reg" id="header_user_reg">注册</button>
+          <button class="header_user_login" id="header_user_login">
+            登录
+          </button>
+        </div>
+        <!-- user登录后 -->
+        <div class="header_user_logined" id="header_user_logined">
+          <ul class="header_user_list" id="header_user_list">
+            <li class="user_logo"><span id="user_logo_pic"></span></li>
+            <li class="user_action"><a href="./center.php" id="center_a">个人中心</a></li>
+            <li class="user_action"><a href="./class.php" id="collection_a">个人关注</a></li>
+            <li class="user_action" id="user_exit_btn">退出登录</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 登录弹窗 -->
+    <div class="login_alert" id="login_alert" style="display: none;">
+      <div class="alert_wrap">
+        <div class="exit" id="login_exit">
+          X
+        </div>
+        <div class="alert_logo"></div>
+        <p>第三方社交软件登录</p>
+        <div class="third_login"></div>
+        <form action="" method="POST">
+          <input type="text" id="login_user_name" name="user_name" placeholder="账号：邮箱或者手机号" autocomplete="off"
+            myerror="myerror" /><input id="login_password" type="password" name="password" placeholder="密码：8位字母和数字组合"
+            myerror="myerror" />
+          <div class="code_div clearFix">
+            <input type="text" class="fl" id="login_code" name="code" placeholder="输入4位验证码" autocomplete="off" />
+            <div class="code_img rl" id="login_code_img" style="
+                  width: 100px;
+                  height: 30px;
+                  line-height: 30px;
+                  border: 1px solid red;
+                  z-index: 1;
+                  margin: 5px auto;
+                  background-image: url(../../flower/php/gd.php?8769);
+                "
+              onclick="document.getElementById('login_code_img').style.backgroundImage = 'url(../../flower/php/gd.php?'+Math.ceil(Math.random()*10000)+')';">
+            </div>
+          </div>
+          <div id="go_login">
+            <input type="button" id="go_login_btn" value="登&nbsp;&nbsp;&nbsp;录" />
+          </div>
+        </form>
+        <p>还没有账号？还不赶紧去<span id="go_to_reg">注册</span></p>
+      </div>
+    </div>
+    <!-- 注册弹窗-->
+    <div class="reg_alert" id="reg_alert" style="display: none;">
+      <div class="alert_wrap">
+        <div class="exit" id="reg_exit">
+          X
+        </div>
+        <div class="alert_logo"></div>
+        <p>第三方社交软件注册</p>
+        <div class="third_login"></div>
+        <form action="" method="POST">
+          <input type="text" id="reg_user_name" name="user_name" placeholder="账号：邮箱或者手机号" autocomplete="off"
+            myerror="myerror" /><input id="reg_password" type="password" name="password" placeholder="密码：8位字母和数字组合"
+            myerror="myerror" />
+          <div class="code_div clearFix">
+            <input type="text" class="fl" id="reg_code" name="code" placeholder="输入4位验证码" autocomplete="off" />
+            <div class="code_img rl" id="reg_code_img" style="
+                  width: 100px;
+                  height: 30px;
+                  line-height: 30px;
+                  border: 1px solid red;
+                  z-index: 1;
+                  margin: 5px auto;
+                  background-image: url(../../flower/php/gd.php?8769);
+                "
+              onclick="document.getElementById('reg_code_img').style.backgroundImage = 'url(../../flower/php/gd.php?'+Math.ceil(Math.random()*10000)+')';">
+            </div>
+          </div>
+          <div id="go_reg">
+            <input type="button" id="go_reg_btn" name="go_reg_btn" value="注&nbsp;&nbsp;&nbsp;册" />
+          </div>
+        </form>
+        <p>已经有了账号？那就<span id="go_to_login">点击登录</span>吧</p>
+      </div>
+    </div>
+    <!-- 上传弹框 -->
+    <div class="alert" id="upload_alert" style="display: none;z-index: 999;">
+      <div class="alert_wrap">
+        <div class="exit" id="upload_exit">
+          X
+        </div>
+        <div class="alert_logo"></div>
+        <form action="./php/upload.php" method="post" id="upload_form" enctype="multipart/form-data">
+          <input type="text" name="category" placeholder="分类" id="upload_category" />
+          <input type="text" name="title" placeholder="标题" />
+          <input type="text" name="detail" placeholder="描述" />
+          <!-- 重要属性 -->
+          <input type="file" name="file" id="upload_img_file" accept="image/gif,image/jpeg,image/jpg,image/png"
+            enctype="multipart/form-data" style="border: none;" />
+          <input type="button" id="upload_btn" value="上 传" style="background-color: #f10;" />
+        </form>
+      </div>
+    </div>
+    <!-- 背景锁定 -->
+    <div class="lock_div" id="lock_div"></div>
+    <!-- header.js引入 -->
+    <script src="./src/js/header.js"></script>
+  </header>
+  <!-- 内容区域 -->
+  <section class="loop">
+    <!-- 轮播实际展示区 -->
+    <div class="loop_view" id="loop_view">
+      <!-- 轮播内容区 -->
+      <!-- 轮播标题 -->
+      <div class="loop_title"></div>
+      <!-- 轮播搜索 -->
+      <div>
+        <!-- 搜索文本区域 -->
+        <div class="loop_search">
+          <form action="#" method="GET">
+            <input type="text" class="loop_search_text" name="keyword" placeholder="搜索你喜欢的" />
+            <input type="button" class="loop_search_button rl" name="submit" />
+          </form>
+          <!-- 热门搜索 -->
+          <div class="loop_search_hot">
+            <label>热门搜索:&nbsp;&nbsp;</label>
+            <span><a href="#">诺贝尔文学奖</a></span>
+            <span><a href="#">核辐射</a></span>
+            <span><a href="#">疫情最新消息</a></span>
+          </div>
+        </div>
+      </div>
+      <!-- 作者连接 -->
+      <div class="loop_author">
+        <label>素材作者:</label>
+        <span><a href="#">陈钰</a></span>
+      </div>
+    </div>
+    <!-- 轮播js -->
+    <script src="./src/js/loop.js"></script>
+  </section>
+  <!-- 分类pic内容 -->
+  <section class="class">
+    <!-- 中间提示 -->
+    <div class="line_area">
+      <!-- 线条 -->
+      <div class="line"></div>
+      <div class="title">大家正在关注</div>
+    </div>
+    <!-- 分类图片连接 -->
+    <div class="class_pic_area">
+      <div class="class_pic_wrap">
+        <a href="#">
+          <div class="class_pic class_pic_1">草莓</div>
+        </a>
+        <a href="#">
+          <div class="class_pic class_pic_2">派对装饰</div>
+        </a>
+        <a href="#">
+          <div class="class_pic class_pic_3">雪山</div>
+        </a>
+        <a href="#">
+          <div class="class_pic class_pic_4">美食</div>
+        </a>
+        <a href="#">
+          <div class="class_pic class_pic_5">书架</div>
+        </a>
+        <a href="#">
+          <div class="class_pic class_pic_6">彩虹色</div>
+        </a>
+        <a href="#">
+          <div class="class_pic class_pic_7">人体艺术</div>
+        </a>
+      </div>
+    </div>
+    <!-- 鼠标进入时变色 -->
+    <script src="./src/js/class_pic.js"></script>
+  </section>
+  <!-- 素材展示 -->
+  <section class="pics">
+    <div class="line_area">
+      <!-- 分割线区域 -->
+      <div class="line"></div>
+      <div class="title">为您推荐</div>
+    </div>
+    <!-- 图片素材区域 -->
+    <div class="pics_area">
+      <div class="pics_area_wrap clearFix">
+        <!-- 单张图片左浮动排列 -->
+        <!-- 左边组合体 -->
+        <a href="./pic.php">
+          <div class="pics_area_pic pics_left">
+            <!-- triangle小三角 -->
+            <div class="tri"></div>
+          </div>
+        </a>
+        <!-- 中间组合体 -->
+        <div class="pics_area_pic pics_middle">
+          <!-- 中间体上半部分 -->
+          <div class="pics_middle_top">
+            <!-- 上半部分内容区域 -->
+            <div class="pics_middle_content">
+              <div class="pic_title">作品名字</div>
+              <div class="pic_count">
+                <span class="get_num">299</span>
+                <span>采集</span>
+                <span class="fans_num">999</span>
+                <span>粉丝</span>
+              </div>
+              <div class="pics_from">from：地球</div>
+            </div>
+          </div>
+          <!-- 中间体下半部分 -->
+          <div class="pics_middle_bottom">
+            <div class="pics_middle_content">
+              <div class="pic_title">作品名字</div>
+              <div class="pic_count">
+                <span class="get_num">359</span>
+                <span>采集</span>
+                <span class="fans_num">666</span>
+                <span>粉丝</span>
+              </div>
+              <div class="pics_from">from:月球</div>
+            </div>
+          </div>
+        </div>
+        <!-- 右边组合体 -->
+        <div class="pics_area_pic pics_right pics_right1">
+          <div class="tri"></div>
+        </div>
+        <!-- 单个体 -->
+        <div class="pics_area_pic pics_single pics_single1">
+          <a href="#">作品名</a>
+        </div>
+
+        <div class="pics_area_pic pics_single pics_single2">
+          <a href="#">作品名</a>
+        </div>
+        <div class="pics_area_pic pics_left pics_single3">
+          <!-- triangle小三角 -->
+          <div class="tri"></div>
+        </div>
+        <!-- 中间组合体 -->
+        <div class="pics_area_pic pics_middle">
+          <!-- 中间体上半部分 -->
+          <div class="pics_middle_top">
+            <!-- 上半部分内容区域 -->
+            <div class="pics_middle_content">
+              <div class="pic_title">作品名字</div>
+              <div class="pic_count">
+                <span class="get_num">299</span>
+                <span>采集</span>
+                <span class="fans_num">999</span>
+                <span>粉丝</span>
+              </div>
+              <div class="pics_from">from：地球</div>
+            </div>
+          </div>
+          <!-- 中间体下半部分 -->
+          <div class="pics_middle_bottom">
+            <div class="pics_middle_content">
+              <div class="pic_title">作品名字</div>
+              <div class="pic_count">
+                <span class="get_num">359</span>
+                <span>采集</span>
+                <span class="fans_num">666</span>
+                <span>粉丝</span>
+              </div>
+              <div class="pics_from">from:月球</div>
+            </div>
+          </div>
+        </div>
+        <div class="pics_area_pic pics_right pics_right_1
+        ">
+          <div class="tri"></div>
+        </div>
+      </div>
+    </div>
+    <!-- more -->
+    <a href="#" class="pics_more">
+      加载更多
+    </a>
+    <!-- 加载图片展示区的动效 ，鼠标进入是透明度改变-->
+    <script src="./src/js/content.js"></script>
+  </section>
+  <!-- 分类table区域 -->
+  <section>
+    <div class="class_table">
+      <div class="class_table_top">
+        <span class="fl class"><a href="./class.html">以分类浏览花瓣网</a></span>
+        <span class="rl allSearch"><a href="#">所有采集&gt;&gt;</a></span>
+      </div>
+      <div class="class_table_bottom clearFix">
+        <ul>
+          <li><a href="#">你好</a></li>
+          <li><a href="#">平面</a></li>
+          <li><a href="#">插画/漫画</a></li>
+          <li><a href="#">家居/家装</a></li>
+          <li><a href="#">女装/搭配</a></li>
+          <li><a href="#">男士/风尚</a></li>
+          <li><a href="#">婚礼</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">工业设计</a></li>
+          <li><a href="#">摄影</a></li>
+          <li><a href="#">造型/美妆</a></li>
+          <li><a href="#">美食</a></li>
+          <li><a href="#">旅行</a></li>
+          <li><a href="#">手工/布艺</a></li>
+          <li><a href="#">健身/舞蹈</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">儿童</a></li>
+          <li><a href="#">宠物</a></li>
+          <li><a href="#">美图</a></li>
+          <li><a href="#">明星</a></li>
+          <li><a href="#">美女</a></li>
+          <li><a href="#">礼物</a></li>
+          <li><a href="#">极客</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">动漫</a></li>
+          <li><a href="#">建筑设计</a></li>
+          <li><a href="#">人文艺术</a></li>
+          <li><a href="#">数据图</a></li>
+          <li><a href="#">游戏</a></li>
+          <li><a href="#">汽车/摩托</a></li>
+          <li><a href="#">电影/图书</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">生活百科</a></li>
+          <li><a href="#">教育</a></li>
+          <li><a href="#">运动</a></li>
+          <li><a href="#">搞笑</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 页脚部分 -->
+  <footer>
+    <!-- 友情连接 -->
+    <div class="footer_links">
+      <!-- 水平居中 -->
+      <div class="footer_links_wrap clearFix">
+        <!-- left -->
+        <div class="footer_links_leftPart fl">
+          <!-- first -->
+          <div class="desc">
+            <h4 class="footer_links_head">花瓣首页</h4>
+            <ul class="footer_links_ul">
+              <li><a href="#">花瓣采集工具</a></li>
+              <li><a href="#">花瓣官方微博</a></li>
+            </ul>
+          </div>
+          <!-- second -->
+          <div class="desc">
+            <h4 class="footer_links_head">联系与合作</h4>
+            <ul class="footer_links_ul">
+              <li><a href="#">联系我们</a></li>
+              <li><a href="#">用户反馈</a></li>
+              <li><a href="#">花瓣logo标准文档</a></li>
+            </ul>
+          </div>
+          <!-- third -->
+          <div class="desc">
+            <h4 class="footer_links_head">移动客户端</h4>
+            <ul class="footer_links_ul">
+              <li><a href="#">花瓣iPhone版</a></li>
+              <li><a href="#">花瓣Android版</a></li>
+              <li><a href="#">花瓣HD</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="footer_links_rightPart rl">
+          <div class="desc">
+            <h4 class="footer_links_head">关注我们</h4>
+            <p>新浪微博：@花瓣网</p>
+            <p>官方QQ：188126952</p>
+            <p><a href="#" class="attestation"></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 版权信息 -->
+    <div class="footer_copyright">
+      <div>
+        <a href="#"><span>&copy;Huaban杭州纬聚网络有限公司</span></a>
+        <span>|</span>
+        <span><a href="#">浙江公网安备33010602001878号</a></span>
+      </div>
+    </div>
+  </footer>
+  <!-- 返回顶部 -->
+  <section id="go_to_top" class="go_to_top" style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 60px;
+        width: 50px;
+        cursor: pointer;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #eee;
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        border: 2px solid #aaa;
+        border-radius: 6px;
+      ">
+    👆
+  </section>
+  <!-- 上传 -->
+  <section id="upload" class="upload" style="
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 120px;
+        width: 50px;
+        cursor: pointer;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #eee;
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        border: 2px solid #aaa;
+        border-radius: 6px;
+      ">
+    上传
+  </section>
+</body>
+
+</html>

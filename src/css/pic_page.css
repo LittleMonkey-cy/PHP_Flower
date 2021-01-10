@@ -1,0 +1,196 @@
+.pic_show {
+    padding-top: 48px;
+    background-color: #fafafa;
+}
+
+.pic_show_wrap {
+    width: 1248px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.page_left {
+    width: 700px;
+    min-height: 500px;
+    padding-bottom: 50px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* 左侧按钮区域 */
+.page_left_button_area {
+    position: relative;
+    height: 48px;
+}
+
+.page_left_button_area button {
+    width: 52px;
+    height: 34px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #8f1b1d;
+}
+
+.page_left_button_area .collection_btn {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+.go_back {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+/* 中部展示区域 */
+.page_left_pic_area {}
+
+.page_left_pic_area img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 10px 10px 10px;
+}
+
+/* 底部评论区 */
+.page_left_chat_area {
+    padding: 30px 0 0 0;
+}
+
+.page_left_chat_area {
+    display: block;
+    width: 550px;
+    margin: 0 auto;
+}
+
+#chat_area_textarea {
+    display: block;
+    width: 550px;
+    height: 100px;
+    margin: 0 auto;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.page_left_chat_submit_wrap {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.page_left_chat_submit_wrap a {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #8f1b1d;
+}
+
+/* 右侧 */
+.page_right {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #ddd;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+/* 发布者区域 */
+.owner_area {
+    height: 100px;
+}
+
+/* 所有者头像 */
+.owner_area_pic {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/default_user_logo.jpg');
+    background-size: 100%;
+}
+
+.owner_area_info {
+    width: 280px;
+    height: 100px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.owner_area_info a {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.owner_area_info p[name="time"] {
+    font-size: 14px;
+    color: grey;
+}
+
+/* 评论历史记录 */
+.recode_area {
+    width: 100%;
+    background-color: #ddd;
+}
+
+/* 单个评论单元 */
+.recode_unit {
+    width: 100%;
+    margin: 2px 0;
+    height: 120px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px gray;
+}
+
+.recode_unit_left {
+    position: relative;
+    width: 70px;
+    height: 120px;
+}
+
+/* 左边头像 */
+.recode_unit_pic {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-image: url('../user_logos/chenyu.jpg');
+    background-size: contain;
+}
+
+.recode_unit_right {
+    width: 326px;
+    min-height: 100px;
+}
+
+.recode_unit_content {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    background-color: #fff;
+}
+
+.recode_unit_time {
+    width: 100%;
+    height: 20px;
+}
+
+/* 左下角用户名 */
+.recode_chat_name,
+.recode_chat_time {
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+}

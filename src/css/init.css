@@ -1,0 +1,35 @@
+/* 清除浏览器默认样式 */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.fl {
+  float: left;
+}
+
+.rl {
+  float: right;
+}
+
+.clearFix:after {
+  /*设置添加的子元素的内容为空*/
+  content: "";
+  /*设置添加的子元素为块级元素*/
+  display: block;
+  /*设置添加的子元素的高度为0*/
+  /* height: 0; */
+  /*设置添加的子元素看不见*/
+  /* visibility: hidden; */
+  /*给添加的子元素设置clear: both;*/
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}

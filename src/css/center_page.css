@@ -1,0 +1,209 @@
+.custom_bg {
+  min-width: 1248px;
+  max-width: 1600px;
+  height: 400px;
+  /* margin-top: 48px; */
+  background-image: url('../img/timg.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+
+.custom_bg_bottom {
+  width: 1248px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 200px;
+  box-shadow: 1px 1px 1px 1px;
+  background-image: url(../img/star.jpg);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.user_head_pic {
+  position: relative;
+  top: -90px;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  border-radius: 90px;
+  background-image: url(../user_logos/chenyu.jpg);
+  background-size: contain;
+}
+
+.user_nickname {
+  position: relative;
+  top: -60px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/* 个人信息区域 */
+.user_info {
+  background-color: #eee;
+}
+
+.user_info_menu {
+  width: 1248px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px;
+}
+
+/* 分页按钮样式 */
+.user_info_menu_btn,
+.user_collection_menu_btn {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.user_info_menu_btn:hover,
+.user_collection_menu_btn:hover {
+  cursor: pointer;
+}
+
+.user_info_menu_btn {
+  color: #ee515d;
+}
+
+/* 选中后的效果 */
+.user_info .user_collection_menu_btn {
+  color: #000;
+}
+
+/* 内容区域 */
+.user_info_area {
+  width: 1248px;
+  margin: 50px auto 0;
+}
+
+/* 个人信息区域的显示与隐藏 */
+.user_main_info {
+  display: block;
+  width: 960px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* 内容填写区域 */
+.user_main_info table {
+  width: 100%;
+  border: 40px solid #fff;
+}
+
+.user_main_info table td {
+  height: 50px;
+  color: #000;
+  font-size: 18px;
+}
+
+.user_login_name {
+  width: 200px !important;
+  height: 20px !important;
+
+}
+
+.user_login_password {
+  outline: none;
+  border: none;
+}
+
+/* 清除默认样式，修改input text样式 */
+.user_main_info input[type="text"] {
+  width: 90%;
+  height: 30px;
+  outline: none;
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+
+/* 单选按钮 */
+.user_main_info input[type="radio"] {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* textarea */
+.user_main_info textarea {
+  resize: none;
+  width: 600px;
+  height: 100px;
+  font-size: 16px;
+}
+
+/* 修改button样式 */
+.user_main_info button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ee515d;
+}
+
+.user_main_info button:hover {
+  cursor: pointer;
+}
+
+/* 个人收藏区域的整体部分 */
+.user_main_collection {
+  display: none;
+  width: 1248px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/* 收藏图片单元 */
+.user_main_collection_unit {
+  width: 240px;
+  height: 360px;
+  margin: 10px 4.8px;
+  background-color: #f10;
+}
+
+/* 单元内容样式 */
+/* 素材作品区域 */
+.collection_unit_works {
+  width: 100%;
+  height: 315px;
+  background-color: brown;
+}
+
+.workers_pic {
+  width: 240px;
+  height: 270px;
+  background-size: cover;
+}
+
+.workers_title {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+
+/* 素材信息区域 */
+.collection_unit_info {
+  height: 45px;
+  background-color: #fff;
+}
+
+.collection_unit_info div {
+  float: left;
+}
+
+.owner_head_pic {
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/logo5.jpg');
+  background-size: contain;
+  overflow: hidden;
+}

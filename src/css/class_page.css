@@ -1,0 +1,133 @@
+/* 分类页面的头部背景 */
+.category_bg {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    padding-top: 100px;
+    background-image: url(../img/default_class_bg.jpg);
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/* 分类标题 */
+.category_bg_title {
+    height: 46px;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.category_bg_detail {
+    font-size: 16px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* 分割线 */
+.split {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.split_left {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 140px;
+    height: 1px;
+    background-color: grey;
+}
+
+.split_title {
+    color: grey;
+}
+
+.split_right {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 140px;
+    height: 1px;
+    background-color: grey;
+}
+
+/* 关注用户的头像 */
+.users {
+    width: 100%;
+    height: 50px;
+}
+
+.users div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 8px;
+    border-radius: 25px;
+    background-color: brown;
+}
+
+.users .users_pic {
+    background-image: url(../img/default_user_pic.png);
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+}
+
+* 个人收藏区域的整体部分 */ .user_main_collection {
+    display: none;
+    width: 1248px;
+    margin: 0 auto;
+    background-color: green;
+}
+
+.info_div_warp {
+    margin-left: 120px;
+}
+
+/* 收藏图片单元 */
+.user_main_collection_unit {
+    float: left;
+    width: 240px;
+    height: 360px;
+    margin: 10px 4.8px;
+    background-color: #f10;
+}
+
+/* 单元内容样式 */
+/* 素材作品区域 */
+.collection_unit_works {
+    width: 100%;
+    height: 315px;
+    background-size: cover;
+}
+
+.workers_pic {
+    width: 240px;
+    height: 270px;
+    background-size: cover;
+}
+
+.workers_title {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+/* 素材信息区域 */
+.collection_unit_info {
+    height: 45px;
+    background-color: #fff;
+}
+
+.collection_unit_info div {
+    float: left;
+}
+
+.owner_head_pic {
+    width: 45px;
+    height: 45px;
+    background-image: url(../img/logo5.jpg);
+    background-size: cover;
+    overflow: hidden;
+}

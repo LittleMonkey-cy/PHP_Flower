@@ -1,0 +1,93 @@
+/* 轮播图大小1600*560 */
+/* 轮播区域 */
+.loop {
+    width: 100%;
+    height: 500px;
+}
+
+/* 真实可视区，宽度不能超过图片实际宽度 */
+/* 设定上边距，水平居中 */
+.loop_view {
+    max-width: 1600px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 130px;
+    box-sizing: border-box;
+    background-image: url(../img/loop_2.jpg);
+    transition: background-image 2s;
+}
+
+/* 水平居中 */
+.loop_title {
+    width: 540px;
+    height: 54px;
+    margin: 0 auto;
+    background-color: transparent;
+    background-image: url(../img/loop_title.svg);
+}
+
+/* 搜索栏 */
+/* 内部垂直居中，外部水平居中 */
+.loop_search {
+    position: relative;
+    top: 50px;
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+/* 搜索文本区 */
+.loop_search_text {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+/* buttoon */
+.loop_search_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background: url(../img/icon_search.svg) no-repeat 8px -40px;
+}
+
+.loop_search .loop_search_button:hover {
+    cursor: pointer;
+}
+
+/* 热搜 */
+/* center */
+.loop_search_hot {
+    width: 400px;
+    margin: 0 auto;
+    outline: hidden;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* 作者 */
+.loop_author {
+    width: 160px;
+    margin-top: 200px;
+    margin-left: 1300px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.loop_search_hot a,
+.loop_author a {
+    color: #fff;
+}
